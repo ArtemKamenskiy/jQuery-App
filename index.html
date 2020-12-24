@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="popup/popup.css" type="text/css">
+    <link rel="stylesheet" href="commons/header.css" type="text/css">
+    <link rel="stylesheet" href="table/table.css" type="text/css">
+    <link rel="stylesheet" href="select/select.css" type="text/css">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <ul class="header__list">
+            <li>
+                <a href="#" class="list__link btn_get-names">Names</a>
+            </li>
+            <li>
+                <a href="#" class="list__link btn_get-usernames">Usernames</a>
+            </li>
+            <li>
+                <a href="#" class="list__link btn_get-email">Email</a>
+            </li>
+        </ul>
+        <div class="select__container">
+            <label>
+                <select class="select__names">
+                </select>
+            </label>
+        </div>
+    </div>
+</header>
+<div class="table">
+    <div class="container table__container">
+        <ul class="table__list user-name">
+            <li class="table__item table__item-bold">Name</li>
+        </ul>
+        <ul class="table__list user-username">
+            <li class="table__item table__item-bold">Username</li>
+        </ul>
+        <ul class="table__list user-email">
+            <li class="table__item table__item-bold">Email</li>
+        </ul>
+    </div>
+</div>
+<div class="popup">
+    <span class="close__btn">&#10005</span>
+    <div class="popup__content">
+        <h2 class="popup__title">Test popup</h2>
+        <p class="popup__text">I use <a href="https://jsonplaceholder.typicode.com/">jsonplaceholder</a> data</p>
+    </div>
+</div>
+<div class="blur"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script.js" type="module"></script>
+<script src="popup/popup.js" type="module"></script>
+</body>
+</html>
