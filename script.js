@@ -1,4 +1,7 @@
+import {blurOn, blurOff, overflowOff} from "./functions/functions.js";
+
 jQuery(document).ready(function () {
+    const body = document.querySelector('body');
     const btnGetNames = document.querySelector('.btn_get-names');
     const btnGetUsernames = document.querySelector('.btn_get-usernames');
     const btnGetEmail = document.querySelector(".btn_get-email");
@@ -8,6 +11,7 @@ jQuery(document).ready(function () {
     const selectNames = document.querySelector(".select__names");
 
     jQuery.get('https://jsonplaceholder.typicode.com/users', (data) => {
+        console.log(data);
         jQuery(btnGetNames).on('click', function () {
             data.forEach(i => {
                 let userInfoNames = document.createElement('li');
@@ -22,6 +26,15 @@ jQuery(document).ready(function () {
                 jQuery(optionsNames).html(i.name);
 
                 jQuery(this).off();
+
+                jQuery(userInfoNames).on('click', function () {
+                    overflowOff();
+                    const userInfo = document.createElement('div');
+                    userInfo.classList.add("user-info");
+                    jQuery(body).append(userInfo);
+                    blurOn();
+                    jQuery(this).off();
+                })
             });
         });
 

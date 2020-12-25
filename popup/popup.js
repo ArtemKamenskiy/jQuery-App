@@ -1,13 +1,11 @@
-import {blurOff} from "../functions/functions.js";
+import {blurOff, overflowOn, overflowOff, popupOff} from "../functions/functions.js";
 
 jQuery(document).ready(function () {
-    const body = document.querySelector("body");
-    const popup = document.querySelector(".popup");
     const closeBtn = document.querySelector(".close__btn");
-    jQuery(body).css("overflow", "hidden")
+    overflowOff();
     jQuery(closeBtn).on('click', function () {
-        jQuery(popup).css("display", "none")
+        popupOff();
         blurOff();
-        jQuery(body).css("overflow", "auto")
+        overflowOn();
     })
 })
