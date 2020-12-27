@@ -1,7 +1,6 @@
-import {blurOn, blurOff, overflowOff} from "./functions/functions.js";
+import {blurOn, popupClose, popupOn} from "./functions/functions.js";
 
 jQuery(document).ready(function () {
-    const body = document.querySelector('body');
     const btnGetNames = document.querySelector('.btn_get-names');
     const btnGetUsernames = document.querySelector('.btn_get-usernames');
     const btnGetEmail = document.querySelector(".btn_get-email");
@@ -9,6 +8,7 @@ jQuery(document).ready(function () {
     const userUsername = document.querySelector(".user-username");
     const userEmail = document.querySelector(".user-email");
     const selectNames = document.querySelector(".select__names");
+    const userInfoTitle = document.querySelector(".user-info__title");
 
     jQuery.get('https://jsonplaceholder.typicode.com/users', (data) => {
         console.log(data);
@@ -16,7 +16,6 @@ jQuery(document).ready(function () {
             data.forEach(i => {
                 let userInfoNames = document.createElement('li');
                 let optionsNames = document.createElement('option');
-
                 userInfoNames.classList.add("table__item");
 
                 userName.append(userInfoNames);
@@ -28,12 +27,10 @@ jQuery(document).ready(function () {
                 jQuery(this).off();
 
                 jQuery(userInfoNames).on('click', function () {
-                    overflowOff();
-                    const userInfo = document.createElement('div');
-                    userInfo.classList.add("user-info");
-                    jQuery(body).append(userInfo);
+                    popupOn();
                     blurOn();
-                    jQuery(this).off();
+                    jQuery(userInfoTitle).text(i.name);
+                    popupClose();
                 })
             });
         });
