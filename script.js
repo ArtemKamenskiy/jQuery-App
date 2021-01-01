@@ -15,14 +15,22 @@ jQuery(document).ready(function () {
             data.forEach(i => {
                 let userInfoNames = document.createElement('li');
                 let name = document.createElement('span');
+                let image = document.createElement('img');
+                let imageContainer = document.createElement('div');
                 let optionsNames = document.createElement('option');
                 let moreInfo = document.createElement('a');
 
                 userInfoNames.classList.add("table__item");
+                imageContainer.classList.add("user-image__container");
+                moreInfo.classList.add("more-info__btn");
 
                 jQuery(moreInfo).attr('href', "#");
+                jQuery(image).attr('src', "./assets/img/icons/profileUser.svg");
+
 
                 jQuery(moreInfo).text("More info...");
+                imageContainer.append(image);
+                userInfoNames.append(imageContainer);
                 userInfoNames.append(name);
                 userInfoNames.append(moreInfo);
                 userName.append(userInfoNames);

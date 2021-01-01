@@ -10,3 +10,15 @@
     outline: none;
     cursor: pointer;
 }
+
+.more-info__btn {
+    margin-top: 10px;
+    color: #737373;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.more-info__btn:hover {
+    color: #000000;
+}

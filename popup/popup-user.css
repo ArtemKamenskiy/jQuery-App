@@ -17,7 +17,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .image-container {
@@ -58,7 +57,7 @@
     box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
 }
 
-.address__item-title {
+.item-title {
     font-size: 20px;
     font-weight: 700;
     text-align: center;
