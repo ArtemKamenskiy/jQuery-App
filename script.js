@@ -22,7 +22,7 @@ jQuery(document).ready(function () {
 
                 jQuery(userInfoNames).addClass("table__item");
                 jQuery(imageContainer).addClass("user-image__container");
-                jQuery(imageContainer).addClass("more-info__btn");
+                jQuery(moreInfo).addClass("more-info__btn");
 
                 jQuery(moreInfo).attr('href', "#");
                 jQuery(image).attr('src', "./assets/img/icons/profileUser.svg");
