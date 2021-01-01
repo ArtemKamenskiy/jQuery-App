@@ -20,22 +20,21 @@ jQuery(document).ready(function () {
                 let optionsNames = document.createElement('option');
                 let moreInfo = document.createElement('a');
 
-                userInfoNames.classList.add("table__item");
-                imageContainer.classList.add("user-image__container");
-                moreInfo.classList.add("more-info__btn");
+                jQuery(userInfoNames).addClass("table__item");
+                jQuery(imageContainer).addClass("user-image__container");
+                jQuery(imageContainer).addClass("more-info__btn");
 
                 jQuery(moreInfo).attr('href', "#");
                 jQuery(image).attr('src', "./assets/img/icons/profileUser.svg");
 
+                jQuery(imageContainer).append(image);
+                jQuery(userInfoNames).append(imageContainer);
+                jQuery(userInfoNames).append(name);
+                jQuery(userInfoNames).append(moreInfo);
+                jQuery(userName).append(userInfoNames);
+                jQuery(selectNames).append(optionsNames);
 
                 jQuery(moreInfo).text("More info...");
-                imageContainer.append(image);
-                userInfoNames.append(imageContainer);
-                userInfoNames.append(name);
-                userInfoNames.append(moreInfo);
-                userName.append(userInfoNames);
-                selectNames.append(optionsNames);
-
                 jQuery(name).text(i.name);
                 jQuery(optionsNames).text(i.name);
 
@@ -50,67 +49,67 @@ jQuery(document).ready(function () {
 
                     //get email
                     const email = document.createElement('li');
-                    email.classList.add("address__item");
+                    jQuery(email).addClass("address__item");
                     jQuery(userInfoMain).append(email);
                     jQuery(email).html("Email: " + i.email);
 
                     //get username
                     const username = document.createElement('li');
-                    username.classList.add("address__item");
+                    jQuery(username).addClass("address__item");
                     jQuery(userInfoMain).append(username);
                     jQuery(username).html("Username: " + i.username);
 
                     //get phone
                     const phone= document.createElement('li');
-                    phone.classList.add("address__item");
+                    jQuery(phone).addClass("address__item");
                     jQuery(userInfoMain).append(phone);
                     jQuery(phone).html("Phone: " + i.phone);
 
                     //get website
                     const website = document.createElement('li');
-                    website.classList.add("address__item");
+                    jQuery(website).addClass("address__item")
                     jQuery(userInfoMain).append(website);
                     jQuery(website).html("Website: " + i.website);
 
                     //get city
                     const city = document.createElement('li');
-                    city.classList.add("address__item");
+                    jQuery(city).addClass("address__item");
                     jQuery(address).append(city);
                     jQuery(city).html("City: " + i.address.city);
 
                     //get street
                     const street = document.createElement('li');
-                    street.classList.add("address__item");
+                    jQuery(street).addClass("address__item");
                     jQuery(address).append(street);
                     jQuery(street).html("Street: " + i.address.street);
 
                     //get suite
                     const suite = document.createElement('li');
-                    suite.classList.add("address__item");
+                    jQuery(suite).addClass("address__item")
                     jQuery(address).append(suite);
                     jQuery(suite).html("Suite: " + i.address.suite);
 
                     //get zipcode
                     const zipcode = document.createElement('li');
-                    zipcode.classList.add("address__item");
+                    jQuery(zipcode).addClass("address__item");
                     jQuery(address).append(zipcode);
                     jQuery(zipcode).html("Zipcode: " + i.address.zipcode);
 
                     //get company name
                     const companyName = document.createElement('li');
-                    companyName.classList.add("address__item");
+                    jQuery(companyName).addClass("address__item");
                     jQuery(company).append(companyName);
                     jQuery(companyName).html("Name: " + i.company.name);
 
                     //get bs
                     const bs = document.createElement('li');
-                    bs.classList.add("address__item");
+                    jQuery(bs).addClass("address__item");
                     jQuery(company).append(bs);
                     jQuery(bs).html("BS: " + i.company.bs);
 
                     //get catch phrase
                     const phrase = document.createElement('li');
-                    phrase.classList.add("address__item");
+                    jQuery(phrase).addClass("address__item");
                     jQuery(company).append(phrase);
                     jQuery(phrase).html("Catch phrase: " + i.company.catchPhrase);
 
